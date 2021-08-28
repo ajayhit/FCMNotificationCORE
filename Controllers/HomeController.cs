@@ -44,6 +44,7 @@ namespace WebApplication1.Controllers
             {
                 Credential = credential
             });
+
             List<string> clientToken = new List<string>();
             clientToken.Add(token);
             var registrationTokens = clientToken;
@@ -54,7 +55,7 @@ namespace WebApplication1.Controllers
                 {
                     Title = title,
                     Body = body,
-                    ImageUrl = "https://www.vastbazaar.com/img/VB.png",
+                 //   ImageUrl = "https://www.vastbazaar.com/img/VB.png",
                 }
             };
             var response = await FirebaseMessaging.DefaultInstance.SendAsync(message).ConfigureAwait(true);
